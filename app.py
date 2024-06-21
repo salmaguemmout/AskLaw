@@ -95,14 +95,6 @@ class ThreadedServer:
         self.server_thread.join()
 
 if __name__ == '__main__':
-    server = ThreadedServer('127.0.0.1', 5000, app)
-    
-    try:
-        server.start()
-        print("Server started at http://127.0.0.1:5000")
-    except KeyboardInterrupt:
-        print("Shutting down server.")
-        server.shutdown()
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        server.shutdown()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+
