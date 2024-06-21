@@ -1,0 +1,11 @@
+pypdf
+langchain
+chromadb  
+pytest
+openai
+ollama
+python-dotenv
+groq
+langchain_community
+langchain-groq
+langchain_openai 
